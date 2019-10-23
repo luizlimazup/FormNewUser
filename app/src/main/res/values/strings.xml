@@ -7,7 +7,7 @@
     <string name="mobile_phone">Digite seu celular</string>
     <string name="cpf">Digite seu CPF</string>
     <string-array name="school">
-        <item>Selecione sua escolaridade</item>
+        <item>Selecione sua escolaridade"</item>
         <item>Ensino fundamental</item>
         <item>Ensino Médio</item>
         <item>Ensino Superior</item>

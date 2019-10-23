@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/zup">
+    tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -15,8 +13,8 @@
         <ImageView
             android:id="@+id/zup"
             android:layout_width="110dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="@dimen/margin_top_20"
             android:background="@drawable/zup"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
@@ -24,25 +22,172 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/name"
+            android:id="@+id/viewName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="16dp"
+            android:padding="5dp"
+            android:background="@drawable/border"
+            android:hint="@string/name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/zup" />
+
+        <EditText
+            android:id="@+id/viewLastName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="5dp"
+            android:background="@drawable/border"
+            android:hint="@string/last_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewName" />
+
+        <EditText
+            android:id="@+id/viewPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="5dp"
+            android:inputType="phone"
+            android:background="@drawable/border"
+            android:hint="@string/phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewLastName" />
+
+        <EditText
+            android:id="@+id/viewMobilePhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="5dp"
+            android:inputType="phone"
+            android:background="@drawable/border"
+            android:hint="@string/mobile_phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewPhone" />
+
+        <EditText
+            android:id="@+id/viewCpf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/border"
+            android:padding="5dp"
+            android:inputType="number"
+            android:hint="@string/cpf"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewMobilePhone" />
+
+        <Spinner
+            android:id="@+id/school"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="5dp"
+            android:background="@drawable/border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewCpf"/>
+
+        <EditText
+            android:id="@+id/viewAdress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="5dp"
+            android:background="@drawable/border"
+            android:hint="@string/adress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/school" />
+
+        <EditText
+            android:id="@+id/neighborhood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="5dp"
+            android:background="@drawable/border"
+            android:elegantTextHeight="true"
+            android:hint="@string/neighborhood"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewAdress" />
+
+        <Spinner
+            android:id="@+id/state"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/neighborhood" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="5dp"
+            android:background="@drawable/border"
+            android:hint="@string/passwprd"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/state" />
+
+        <EditText
+            android:id="@+id/passwordConfim"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:background="@drawable/background"
-            android:elegantTextHeight="true"
-            android:hint="@string/name"
-            android:textAlignment="center"
-            android:textAppearance="?android:textAppearanceSmall"
-            android:textColorHint="@android:color/black"
-            app:layout_constraintTop_toBottomOf="@+id/zup"
-            tools:layout_editor_absoluteX="0dp" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:padding="5dp"
+            android:background="@drawable/border"
+            android:hint="@string/password_confirm"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/send"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password" />
 
         <Button
             android:id="@+id/send"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="600dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/background"
             android:elegantTextHeight="true"
             android:text="@string/button_send"
@@ -51,139 +196,10 @@
             android:textColor="@android:color/white"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/zup" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content">-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/zup"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@drawable/zup"-->
-<!--                android:scaleType="fitXY" />-->
-
-
-
-<!--            <EditText-->
-<!--                android:id="@+id/lastName"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:hint="@string/last_name"-->
-<!--                android:background="@drawable/background"-->
-<!--                android:textColorHint="@android:color/black"-->
-<!--                android:textAppearance="?android:textAppearanceSmall"-->
-<!--                android:elegantTextHeight="true"-->
-<!--                android:textAlignment="center"/>-->
-
-<!--            <EditText-->
-<!--                android:id="@+id/phone"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:inputType="phone"-->
-<!--                android:hint="@string/phone"-->
-<!--                android:background="@drawable/background"-->
-<!--                android:textColorHint="@android:color/black"-->
-<!--                android:textAppearance="?android:textAppearanceSmall"-->
-<!--                android:elegantTextHeight="true"-->
-<!--                android:textAlignment="center"/>-->
-
-<!--            <EditText-->
-<!--                android:id="@+id/mobile_phone"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:inputType="phone"-->
-<!--                android:hint="@string/mobile_phone"-->
-<!--                android:background="@drawable/background"-->
-<!--                android:textColorHint="@android:color/black"-->
-<!--                android:textAppearance="?android:textAppearanceSmall"-->
-<!--                android:elegantTextHeight="true"-->
-<!--                android:textAlignment="center"/>-->
-
-<!--            <EditText-->
-<!--                android:id="@+id/cpf"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:inputType="number"-->
-<!--                android:hint="@string/cpf"-->
-<!--                android:background="@drawable/background"-->
-<!--                android:textColorHint="@android:color/black"-->
-<!--                android:textAppearance="?android:textAppearanceSmall"-->
-<!--                android:elegantTextHeight="true"-->
-<!--                android:textAlignment="center"/>-->
-
-<!--            <Spinner-->
-<!--                android:id="@+id/school"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@drawable/background"-->
-<!--                android:textAppearance="?android:textAppearanceSmall"-->
-<!--                android:elegantTextHeight="true"-->
-<!--                android:textAlignment="center"/>-->
-
-<!--            <EditText-->
-<!--                android:id="@+id/adress"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:hint="@string/adress"-->
-<!--                android:background="@drawable/background"-->
-<!--                android:textColorHint="@android:color/black"-->
-<!--                android:textAppearance="?android:textAppearanceSmall"-->
-<!--                android:elegantTextHeight="true"-->
-<!--                android:textAlignment="center"/>-->
-
-<!--            <EditText-->
-<!--                android:id="@+id/neighborhood"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:hint="@string/neighborhood"-->
-<!--                android:background="@drawable/background"-->
-<!--                android:textColorHint="@android:color/black"-->
-<!--                android:textAppearance="?android:textAppearanceSmall"-->
-<!--                android:elegantTextHeight="true"-->
-<!--                android:textAlignment="center"/>-->
-
-<!--            <Spinner-->
-<!--                android:id="@+id/state"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@drawable/background"-->
-<!--                android:textAppearance="?android:textAppearanceSmall"-->
-<!--                android:elegantTextHeight="true"-->
-<!--                android:textAlignment="center" />-->
-
-<!--            <EditText-->
-<!--                android:id="@+id/password"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-
-<!--                android:inputType="textPassword"-->
-<!--                android:hint="@string/passwprd"-->
-<!--                android:background="@drawable/background"-->
-<!--                android:textColorHint="@android:color/black"-->
-<!--                android:textAppearance="?android:textAppearanceSmall"-->
-<!--                android:elegantTextHeight="true"-->
-<!--                android:textAlignment="center"/>-->
-
-<!--            <EditText-->
-<!--                android:id="@+id/passwordConfim"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:inputType="textPassword"-->
-<!--                android:hint="@string/password_confirm"-->
-<!--                android:background="@drawable/background"-->
-<!--                android:textColorHint="@android:color/black"-->
-<!--                android:textAppearance="?android:textAppearanceSmall"-->
-<!--                android:elegantTextHeight="true"-->
-<!--                android:textAlignment="center"/>-->
-
-
-
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 </ScrollView>
