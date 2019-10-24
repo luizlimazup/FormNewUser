@@ -30,5 +30,9 @@ public class MainActivity extends AppCompatActivity {
                             R.array.state, android.R.layout.simple_spinner_item);
         state.setAdapter(adapterState);
 
+        ArrayAdapter  adapterStyle = ArrayAdapter.createFromResource(this, R.array.state, R.layout.spinner_item);
+        state.setAdapter(adapterStyle);
+        ArrayAdapter  adapterStyle1 = ArrayAdapter.createFromResource(this, R.array.school, R.layout.spinner_item);
+        school.setAdapter(adapterStyle1);
     }
 }

@@ -18,7 +18,7 @@
     <string name="password_confirm">Confirme sua senha</string>
     <string name="button_send">Enviar</string>
     <string-array name="state">
-        <item>Selecione seu Estado</item>
+        <item>Selecione seu estado</item>
         <item>AC</item>
         <item>AL</item>
         <item>AP</item>
